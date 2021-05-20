@@ -31,13 +31,19 @@ function Header() {
                     <CloseBtn onClick={() => setNavStatus(false)}/>
                 </CloseWrapper>
                 <li><a href='#'>Exsisting Inventory</a></li>
-                <li><a href='#'>Exsisting Inventory</a></li>
-                <li><a href='#'>Exsisting Inventory</a></li>
-                <li><a href='#'>Exsisting Inventory</a></li>
-                <li><a href='#'>Exsisting Inventory</a></li>
-                <li><a href='#'>Exsisting Inventory</a></li>
-                <li><a href='#'>Exsisting Inventory</a></li>
-                <li><a href='#'>Exsisting Inventory</a></li>
+                <li><a href='#'>Used Inventory</a></li>
+                <li><a href='#'>Trade-In</a></li>
+                <li><a href='#'>Cybertruck</a></li>
+                <li><a href='#'>Roadster</a></li>
+                <li><a href='#'>Semi</a></li>
+                <li><a href='#'>Charging</a></li>
+                <li><a href='#'>Powerwall</a></li>
+                <li><a href='#'>Commercial Energy</a></li>
+                <li><a href='#'>Ultilities</a></li>
+                <li><a href='#'>Test Drive</a></li>
+                <li><a href='#'>Find Us</a></li>
+                <li><a href='#'>Support</a></li>
+                <li><a href='#'>United States</a></li>
             </RightNav>
         </Container>
     )
@@ -56,6 +62,10 @@ const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
+    img {
+        width: auto;
+        height: 20px;
+    }
 `
 
 const Menu = styled.div`
@@ -69,6 +79,7 @@ const Menu = styled.div`
         text-transform: uppercase;
         padding: 0 10px;
         flex-wrap: no-wrap;
+        font-size: 15px;
 
     }
 
@@ -84,11 +95,15 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     margin-right: 10px
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 `
 
 const CustomMenu = styled(MenuIcon)`
     cursor: pointer;
+    margin-top: -2px;
 `
 
 const RightNav = styled.div`
@@ -109,9 +124,12 @@ const RightNav = styled.div`
     li {
         padding: 15px 0;
         border-bottom: 1px solid rgba(0, 0, 0, .2);
+        margin-top: 10px;
 
         a {
             font-weight: 600;
+            text-transform: uppercase;
+            font-size: 15px;
         }
     }
 `
