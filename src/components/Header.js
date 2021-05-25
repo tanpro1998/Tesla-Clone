@@ -2,10 +2,14 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
+import { useSelector } from 'react-redux'
+import { selectCars } from '../features/car/carSlice'
 
 function Header() {
 
-    const [navSatus, setNavStatus] = useState(false)
+    const [navStatus, setNavStatus] = useState(false)
+    // const cars = useSelector(selectCars)
+
 
     return (
         <Container>
@@ -26,7 +30,7 @@ function Header() {
                 <a href='#'>Tesla Account</a>
                 <CustomMenu onClick={() => setNavStatus(true)}/>
             </RightMenu>
-            <RightNav show={navSatus}>
+            <RightNav show={navStatus}>
                 <CloseWrapper>
                     <CloseBtn onClick={() => setNavStatus(false)}/>
                 </CloseWrapper>
